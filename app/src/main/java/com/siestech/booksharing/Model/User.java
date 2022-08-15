@@ -3,6 +3,16 @@ package com.siestech.booksharing.Model;
 public class User {
     private String name, profession, email, password;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    private String image;
+
     public User(String name, String profession, String email, String password) {
         this.name = name;
         this.profession = profession;
