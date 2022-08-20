@@ -13,6 +13,8 @@ public class User {
 
     private String image;
 
+    private String userId;
+
     public User(String name, String profession, String email, String password) {
         this.name = name;
         this.profession = profession;
@@ -53,5 +55,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

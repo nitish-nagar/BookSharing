@@ -2,6 +2,7 @@ package com.siestech.booksharing.Fragment;
 
 import static android.app.Activity.RESULT_OK;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +33,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.siestech.booksharing.Adapter.FriendAdapter;
+import com.siestech.booksharing.LoginActivity;
+import com.siestech.booksharing.MainActivity;
 import com.siestech.booksharing.Model.FriendModel;
 import com.siestech.booksharing.Model.User;
 import com.siestech.booksharing.R;
@@ -64,6 +69,7 @@ public class ProfileFragment extends Fragment {
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
         database = FirebaseDatabase.getInstance();
+        binding = FragmentProfileBinding.inflate(getLayoutInflater());
     }
 
     @Override
@@ -77,7 +83,8 @@ public class ProfileFragment extends Fragment {
                 if(snapshot.exists()){
                     User user = snapshot.getValue(User.class);
                     Picasso.get().load(user.getImage()).placeholder(R.drawable.ic_profile).into(profile_image);
-                    //user details here
+                    binding.userName.setText(user.getName());
+                    binding.profession.setText(user.getProfession());
                 }
             }
 
@@ -152,5 +159,17 @@ public class ProfileFragment extends Fragment {
                     });
 
         }
+    }
+
+    public void logout(View view) {
+//            mAuth.signOut();
+//            Intent intent = new Intent(getActivity(), LoginActivity.class);
+//            startActivity(intent);
+        FirebaseAuth.getInstance().signOut();
+        Intent i = new Intent(getActivity(),
+                LoginActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(i);
     }
 }
