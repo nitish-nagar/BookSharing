@@ -21,6 +21,7 @@
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/activity_sign_up.xml" value="0.15760869565217392" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/dashboard_rv_sample.xml" value="0.16666666666666666" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/fragment_add.xml" value="0.16485507246376813" />
+        <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/fragment_add_post.xml" value="0.15307971014492755" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/fragment_home.xml" value="0.16485507246376813" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/fragment_notification.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/fragment_notification2.xml" value="0.16077898550724637" />
@@ -29,7 +30,7 @@
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/friend_rv_sample.xml" value="0.16077898550724637" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/notification2sample.xml" value="0.22" />
-        <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/user_sample.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/layout/user_sample.xml" value="0.16666666666666666" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/menu/menu_item.xml" value="0.17552083333333332" />
         <entry key="..\:/AndroidProjects/BookSharing/app/src/main/res/xml/tabs.xml" value="0.1" />
       </map>
